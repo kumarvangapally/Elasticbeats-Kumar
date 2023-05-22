@@ -1,0 +1,12 @@
+- hosts: localhost
+  become: true
+  roles:
+   - role: elastic.beats
+  vars:
+   beats_version: 7.17.0
+   beat: metricbeat
+   beat_conf:
+    metricbeat.modules:
+     - system
+     - kafka
+    enabled: true
