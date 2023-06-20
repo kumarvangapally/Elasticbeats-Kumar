@@ -1,0 +1,10 @@
+pipeline {
+	agent {label 'Jenkins-Slave'}
+	stages {
+	 stage ('Beats Installation'){
+	  steps {
+	    sh 'ansible-playbook install elasticbeats.yml'
+		}
+	}	
+}
+}
