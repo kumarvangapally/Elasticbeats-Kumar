@@ -1,5 +1,6 @@
 - name: Elastic Beats Installation
   hosts: LinuxServers
+  become: True
   roles: 
     - elastic.beats
   vars:
