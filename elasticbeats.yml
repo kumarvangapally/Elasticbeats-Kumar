@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: kafka
   become: true
   roles:
    - role: elastic.beats
